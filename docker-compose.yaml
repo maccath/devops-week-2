@@ -3,6 +3,7 @@ services:
   quote-gen:
     build: ./quote_gen
     container_name: quote-gen-container
+    image: quote-gen-service
     ports:
       - "5000:5000"
     volumes:
@@ -10,6 +11,7 @@ services:
   quote-disp:
     build: ./quote_disp
     container_name: quote-disp-container
+    image: quote-disp-service
     ports:
       - "5001:5001"
     depends_on:
